@@ -1,0 +1,27 @@
+def partisition(a,li,hi):
+    pi=a[hi]
+    i=li-1
+
+    for j in range(li,hi):
+        if a[j]<pi:
+            i+=1
+            temp=a[i]
+            a[i]=a[j]
+            a[j]=temp
+            print(a)
+
+    print("")
+
+    
+            
+    temp=a[i+1]
+    a[i+1]=a[hi]
+    a[hi]=temp
+
+    return i+1
+
+def quicksort(a,li,hi):
+    if hi>li:
+        pi=partisition(a,li,hi)
+        quicksort(a,li,pi-1)
+        quicksort(a,pi+1,hi)

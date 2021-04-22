@@ -1,0 +1,39 @@
+def merge(a,l,m,r):
+    f=a[l:m]
+    g=a[m:r]
+    i=0
+    j=0
+    k=l
+    f.sort()
+    g.sort()
+    while i<len(f) and j<len(g):
+        if f[i]<g[j]:
+            a[k]=f[i]
+            i+=1
+            k+=1
+        else:
+            a[k]=g[j]
+            j+=1
+            k+=1
+    if i!=len(f):
+        while(i<len(f)):
+            a[k]=f[i]
+            i+=1
+            k+=1
+    if j!=len(g):
+        while(j<len(g)):
+            a[k]=g[j]
+            j+=1
+            k+=1
+
+    
+    
+        
+            
+def merge_sort(a,l,r):
+
+    if l<r:
+        m=int((l+r)/2)
+        merge_sort(a,l,m)
+        merge_sort(a,m+1,r)
+        merge(a,l,m,r)

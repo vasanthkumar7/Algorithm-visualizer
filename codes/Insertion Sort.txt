@@ -1,0 +1,25 @@
+def swap(a,b):
+    temp=a
+    a=b
+    b=temp
+
+
+def insertion_sort(a):
+
+    for i in range(0,len(a)):
+        j=0
+        mins=-1
+        minelement=0
+        prev=a[i]
+        while(j<i):
+            if a[j]>a[i]:
+                mins=j
+                
+                break
+            j+=1
+            
+        if mins!=-1:
+            for w in range(i,mins-1,-1):
+                a[w]=a[w-1]
+            a[mins]=prev
+   
