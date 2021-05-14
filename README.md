@@ -12,6 +12,7 @@ this project cerated using python ( ui-framework - tkinter)
 - Pillow
 
 Images
-!["scrrenshot"](screenshots/Screenshot (126).png) 
 
 
+
+<img src="screenshots/Screenshot (126).png" width="200px" height="100px">
