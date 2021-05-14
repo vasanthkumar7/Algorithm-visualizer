@@ -11,7 +11,7 @@ this project cerated using python ( ui-framework - tkinter)
 - keyboard
 - Pillow
 
-Images
+## Screenshots
 
 
 
