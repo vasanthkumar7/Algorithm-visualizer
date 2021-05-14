@@ -12,6 +12,6 @@ this project cerated using python ( ui-framework - tkinter)
 - Pillow
 
 Images
-["scrrenshot"]("screenshots/Screenshot (128).jpg")
+!["scrrenshot"](screenshots/Screenshot (128).png "LCO") 
 
 
