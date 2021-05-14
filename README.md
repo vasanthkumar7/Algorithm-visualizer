@@ -5,6 +5,25 @@ types of algorithms are visualized searching, sorting,pathfinding
 
 this project cerated using python ( ui-framework - tkinter)
 
+## Types of algorithms
+
+1.Sorting algorithm
+ -Bubble sort
+ -selection sort
+ -insertion sort
+ -merge sort
+ -quick sort
+ 
+ 1.Path finding algorithm
+ -Dijkstras
+ -A star
+ -Bidirectional
+ -Breadth first search
+ 
+ 1.Searching algorithm
+ -linear search
+ -binary search
+
 ## Moduels used
 
 - tkinter
