@@ -18,3 +18,8 @@ this project cerated using python ( ui-framework - tkinter)
 <img src="screenshots/Screenshot (126).png" >
 <img src="screenshots/Screenshot (128).png" >
 <img src="screenshots/Screenshot (144).png" >
+
+## Whats the purpose
+
+this project kind a gives you idea about how algorithm works and what are it uses 
+
