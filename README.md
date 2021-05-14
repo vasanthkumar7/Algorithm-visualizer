@@ -16,3 +16,5 @@ this project cerated using python ( ui-framework - tkinter)
 
 
 <img src="screenshots/Screenshot (126).png" >
+<img src="screenshots/Screenshot (128).png" >
+<img src="screenshots/Screenshot (144).png" >
