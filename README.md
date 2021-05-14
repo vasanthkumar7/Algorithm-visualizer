@@ -15,4 +15,4 @@ Images
 
 
 
-<img src="screenshots/Screenshot (126).png" width="200px" height="100px">
+<img src="screenshots/Screenshot (126).png" >
