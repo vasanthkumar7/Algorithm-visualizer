@@ -5,7 +5,7 @@ types of algorithms are visualized searching, sorting,pathfinding
 
 this project cerated using python ( ui-framework - tkinter)
 
-##moduels used
+## moduels used
 
 - tkinter
 - keyboard
