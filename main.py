@@ -23,7 +23,7 @@ from binary_search import *
 root1 = Tk()
 
 
-p1 = PhotoImage(file = 'C:\\Users\\New\\Desktop\\python projects\\algorithm visulaizer\\bar-chart.png')
+p1 = PhotoImage(file = 'bar-chart.png')
 
 root1.iconphoto(False, p1)
 
