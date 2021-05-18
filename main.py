@@ -73,7 +73,7 @@ menubar.add_cascade(label="       Explanation & Codes", menu=filemenu2)
 root1.config(menu=menubar)
 
 width=root1.winfo_screenwidth()
-spacer=(" "*(int(width)//5))
+spacer=(" "*(int(width)//7))
 root1.title(spacer+"ALGORITHM VISUALIZER")
 root1.config(bg="black")
 
@@ -81,24 +81,27 @@ root=Frame(root1)
 root.config(bg="black")
 selected_alg=StringVar()
 ui_frame=Frame(root,width=600,height=200,bg="grey")
-
-
 ui_frame.grid(row=1,column=0,padx=10,pady=5)
 
-canvas=Canvas(root,width=1300,height=530,bg="#171717")
+natural_width=root1.winfo_screenwidth()-100
+natural_height=root1.winfo_screenheight()-250
+
+    
+    
+canvas=Canvas(root,width=natural_width,height=natural_height,bg="#171717")
 canvas.grid(row=0,column=0,padx=20,pady=5)
 
 def drawdata(data,colorarray):
     canvas.delete("all")
-    c_height=530
-    c_width=1300
+    c_height=natural_height
+    c_width=natural_width
     x_width=c_width/(len(data)+1)
     offset = 5
     spacing =10
     normalize=[i/max(data) for  i in data]
     
     for i,height  in enumerate(normalize):
-        x0,y0=i*x_width+offset+spacing,c_height-height*465
+        x0,y0=i*x_width+offset+spacing,c_height-height*(natural_height-65)
         x1,y1=(i+1)*x_width+offset+spacing,c_height
         canvas.create_rectangle(x0,y0,x1,y1,fill=colorarray[i])
         canvas.create_text(x0+2,y0,anchor=SW,text=str(data[i]),fill="white")
@@ -113,53 +116,7 @@ data=[]
 Label(ui_frame,text="Algorithm: ",bg="grey").grid(row=0,column=0,padx=5,pady=5,sticky=W)
 
 
-def rem():
-   
-    global songbox
-    songbox.delete(0,END)
-    
-def open_doc():
-    global txt
-    global songbox
-    global algmenu
-    global what_in
-    global wht
-    global b1,b2
 
-    
-
-    rem()
-
-    if "search" in algmenu.get():
-        ui_frame1.grid(row=0,column=4)
-    else:
-        ui_frame1.grid_forget()
-        
-
-
-    wht.configure(text=algmenu.get())
-    if what_in=="e":
-        b1.configure(bg="black",fg="white")
-        b2.configure(bg="white",fg="black")
-        text_file=open("explanations\\"+algmenu.get()+".txt","r")
-    else:
-        b2.configure(bg="black",fg="white")
-        b1.configure(bg="white",fg="black")
-        text_file=open("codes\\"+algmenu.get()+".txt","r")
-        
-    stuff=text_file.read()
-
-    dgf=""
-    lables=[]
-    for i in stuff:
-        if i=="\n":
-            lables.append(dgf)
-            dgf=""
-        else:
-            dgf+=i
-
-    for i in range(len(lables)):
-        songbox.insert(END,lables[i])
 def change_the_case():
     global algmenu,ui_frame1
 
@@ -283,10 +240,13 @@ ulla_frame=Frame(root,bg="grey")
 ulla_frame.grid(row=0,column=3,padx=2,pady=5,columnspan=2,rowspan=2)
 generate()
 
-
-
 #pathfinding part
+global_row=23
+global_column=40
 
+if root1.wininfo_screenwidth()<1366 or root.wininfo_screenheight()<768:
+    global_row-=3
+    global_column-=3
 
 root2=Frame(root1)
 b1354=Frame(root2,bg="black")
@@ -313,9 +273,9 @@ def h(p1, p2):
     x2, y2 = p2
     return abs(x1 - x2) + abs(y1 - y2)
 
-for i in range(23):
+for i in range(global_row):
     f=[]
-    for j in range(40):
+    for j in range(global_column):
         f.append(0)
 
     
@@ -520,13 +480,13 @@ def create_butt(i,j):
     return jb
     
 def create_grid():
-    global grid1
+    global grid1,global_row,global_column
    
     
     
-    for i in range(23):
+    for i in range(global_row):
         f=[]
-        for j in range(40):
+        for j in range(global_column):
             f.append(create_butt(i,j))
             f[-1].grid(row=i,column=j)
 
