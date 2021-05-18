@@ -244,7 +244,7 @@ generate()
 global_row=23
 global_column=40
 
-if root1.wininfo_screenwidth()<1366 or root.wininfo_screenheight()<768:
+if root1.winfo_screenwidth()<1366 or root.winfo_screenheight()<768:
     global_row-=3
     global_column-=3
 
